@@ -34,7 +34,7 @@
           >
 
           <ul class="site-links list">
-            <li class="item">
+            <li class="item item-studio">
               <a href="./index.html" class="link nav-link">Studio</a>
             </li>
             <li class="item">
@@ -68,7 +68,8 @@
       <section class="section-hero">
         <div class="container">
           <h1 class="title-hero">Effective Solutions for Your Business</h1>
-          <button type="button" class="button-index">Order Service</button>
+          <button type="button"  class="button-index" data-modal-open>Order Service</button>
+        
         </div>
       </section>
 
@@ -388,5 +389,21 @@
        
       </div>
     </footer>
+
+      <!-- модальне вікно на кнопку Order Service  -->
+    <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+              <!-- <p>
+               
+              </p> -->
+              <button data-modal-close class="button-modal-close">
+                <svg  class="icon-modal" width="24" height="24">
+                <use href="./images/icon.svg#icon-close-black"></use>
+               </svg>
+            </button>
+          </div>
+        </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
