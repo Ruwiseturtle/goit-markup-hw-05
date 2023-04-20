@@ -76,16 +76,15 @@ h1, h2, h3, h4, h5, h6, p, ul{
     margin: 0 auto;
     padding: 16px 32px;
     border-radius: 4px;
-   
-    
+    cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
 }
 
 .button-index:hover,
 .button-index:focus{
-    background-color: var(--accent-second-color);
-    color: var(--primary-white-color);
-    cursor: pointer;
+    background-color: var(--accent-second-color);     
 }
 
 
@@ -104,17 +103,23 @@ h1, h2, h3, h4, h5, h6, p, ul{
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     padding: 12px 24px;
+    cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .button-portfolio:hover,
 .button-portfolio:focus{
     color: var(--primary-white-color);
     background: var(--accent-second-color);
-    cursor: pointer;
-    border: 1px solid transparent;
+    border-color: transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 2px 1px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
+    
 }
 
 .list-filter{
@@ -138,19 +143,20 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 .nav-link{
-    color: var(--accent-second-color);
     color: var(--second-text-color);
     Font-style: Medium;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
 .nav-link:hover,
 .nav-link:focus{
-    color: var(--accent-second-color)
+    color: var(--accent-second-color);
 }
 
 .header-main{
@@ -280,11 +286,14 @@ h1, h2, h3, h4, h5, h6, p, ul{
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover,
 .contact-link:focus{
     color: var(--accent-second-color);
+    
 }
 
 .address{
@@ -373,19 +382,24 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 .button-modal-close{
-    position: absolute;
-    box-sizing: border-box;
-    position: absolute;
-    right: 24px;
-    top: 24px;
+    display: block;
+    margin-left: auto;
+    
 
     border-radius: 50%;
     background-color: var(--btn-background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-modal-close:hover,
+.button-modal-close:focus{
+    background-color: var(--accent-second-color);
 }
 
 .icon-modal{
-    
+   
     justify-content: center;
     align-items: center;
     width: 8px;
@@ -509,9 +523,9 @@ h1, h2, h3, h4, h5, h6, p, ul{
     display: block;
 }
 
-.link-app{
-   
+.link-app{   
     display: block;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-app:hover,
@@ -519,6 +533,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
+        
 }
 
 /*------------ portfolio projects------- */
@@ -541,7 +556,12 @@ h1, h2, h3, h4, h5, h6, p, ul{
     opacity: 0;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project:hover .owerlay {
+    transform: translateY(0);
+    opacity: 0.9;
 }
 
 .owerlay > p{
@@ -556,10 +576,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     color: var(--third-text-color);
 }
 
-.project:hover .owerlay{
-    transform: translateY(0);
-    opacity: 0.9;
-}
+
 
 .project-text {
     /* outline: 1px solid violet; */
@@ -636,15 +653,19 @@ h1, h2, h3, h4, h5, h6, p, ul{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .href-teamnetwork:hover,
 .href-teamnetwork:focus{
     background-color: var(--accent-second-color);
+    
 
 }
 .icon-network-team:hover,
 .icon-network-team:focus{
     fill: var(--third-text-color);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--------------- customers------------ */
@@ -692,12 +713,16 @@ h1, h2, h3, h4, h5, h6, p, ul{
     border-radius: 4px;
     width: 100%;
     height: 100%;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .href-customer:hover,
 .href-customer:focus{
     border-color: var(--accent-second-color);
     color: var(--accent-second-color);
+    
 }
 
 .icon-customer{
@@ -768,11 +793,14 @@ h1, h2, h3, h4, h5, h6, p, ul{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .href-network:hover,
 .href-network:focus{
     background-color: var(--secondary-icon-color);
+    
 
 }
 
