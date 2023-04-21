@@ -390,11 +390,13 @@ h1, h2, h3, h4, h5, h6, p, ul{
     background-color: var(--btn-background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-modal-close:hover,
 .button-modal-close:focus{
+    fill: var(--primary-white-color);
     background-color: var(--accent-second-color);
 }
 
@@ -405,6 +407,8 @@ h1, h2, h3, h4, h5, h6, p, ul{
     width: 8px;
     height: 8px;
 }
+
+
 
 /*--------------------- qualities---------------- */
 .hidden-title{   
@@ -508,6 +512,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    margin-bottom: 8px;
 }
 
 
@@ -624,13 +629,13 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 .member-container{
-    padding: 32px 0;
+    padding: 32px 16px;
     
 }
 
 .list-networks{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap:24px;   
 }
 
